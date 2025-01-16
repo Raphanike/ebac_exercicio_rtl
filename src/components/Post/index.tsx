@@ -1,5 +1,4 @@
 import styles from './Post.module.css';
-
 import PostComments from '../PostComments';
 import { ReactNode } from 'react';
 
@@ -10,8 +9,8 @@ type Props = {
 
 const Post = ({ children, imageUrl }: Props) => (
     <div className={styles.post}>
-        <img className={styles['post-image']} src={imageUrl} />
-        <p className={styles['post-text']}> {children} </p>
+        <img className={styles['post-image']} src={imageUrl} alt="Imagem do post" />
+        <div className={styles['post-text']}>{children}</div>
         <PostComments />
     </div>
 );
